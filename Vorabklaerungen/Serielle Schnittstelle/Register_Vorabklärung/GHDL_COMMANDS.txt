@@ -1,0 +1,22 @@
+-------------------------------------------------------
+-- Titel       : GHDL Commands Textdatei
+-------------------------------------------------------
+-- Projekt     : Design eines generischen, einstellbaren Filters für die digitale Verarbeitung biologischer Signale
+-- Filename    : GHDL_COMMANDS.txt
+-- Autor       : Stefan Foltrauer
+-- Letze Änderungen : 17.10.2026
+-------------------------------------------------------
+-- Beschreibung: 
+-- Enthät die GHDL commands für das Simulieren des SPI-Prototyps welche im zuge der Vorabklärungen erstellt wurde.
+-------------------------------------------------------
+
+ghdl -a --std=08 .\spi_slave.vhdl
+ghdl -a --std=08 .\register.vhdl
+ghdl -a --std=08 .\top_level.vhdl
+ghdl -a --std=08 .\spi_slave_tb.vhdl
+
+ghdl -e --std=08 top_tb
+ghdl -r --std=08 top_tb
+
+ghdl -r --std=08 top_tb --vcd=wave.vcd
+gtkwave wave.vcd
