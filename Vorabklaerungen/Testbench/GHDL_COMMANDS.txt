@@ -1,0 +1,20 @@
+-------------------------------------------------------
+-- Titel       : GHDL Commands Textdatei
+-------------------------------------------------------
+-- Projekt     : Vorabklärung TB
+-- Filename    : GHDL_COMMANDS.txt
+-- Autor       : Stefan Foltrauer
+-- Letze Änderungen : 17.10.2026
+-------------------------------------------------------
+-- Beschreibung: 
+-- Enthät die GHDL commands für das Simulieren der Vorabklärung der TB welche im zuge der Vorabklärungen erstellt wurde.
+-------------------------------------------------------
+ghdl -a --std=08 fir_filter.vhdl
+
+ghdl -a --std=08 tb_fir_filter.vhdl
+ghdl -e --std=08 tb_fir_filter
+ghdl -r --std=08 tb_fir_filter
+
+ghdl -a --std=08 tb_fir_filter_V1.vhdl
+ghdl -e --std=08 tb_fir_filter_V1
+ghdl -r --std=08 tb_fir_filter_V1
